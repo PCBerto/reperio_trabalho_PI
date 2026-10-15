@@ -1,0 +1,692 @@
+
+:root {
+  --ink: #101116;
+  --navy: #191d2b;
+  --pale: #c8d2db;
+  --coral: #dc8269;
+  --blue: #3679b9;
+  --light-blue: #9abaff;
+  --white: #f6f7f8;
+
+  --font: 'Montserrat', Arial, sans-serif;
+  --display: 'Bebas Neue', Impact, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--white);
+  font-family: var(--font);
+}
+
+a {
+  color: inherit;
+}
+
+/* BARRA DE NAVEGAÇÃO */
+
+.topbar {
+  min-height: 64px;
+  padding: 8px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  background: var(--pale);
+  color: var(--navy);
+}
+
+.wordmark {
+  font-size: clamp(1.45rem, 3vw, 2.2rem);
+  text-underline-offset: 5px;
+  font-weight: 400;
+  letter-spacing: -1.8px;
+}
+
+.top-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 9px 18px;
+  border-radius: 28px;
+  border: 1.5px solid var(--navy);
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.btn-outline {
+  background: transparent;
+}
+
+.btn-dark {
+  color: var(--pale);
+  background: var(--navy);
+}
+
+/* APRESENTAÇÃO PRINCIPAL */
+
+.hero {
+  min-height: 285px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 7%;
+  padding: 20px 2.4% 28px;
+  background: var(--navy);
+  border-bottom: 7px solid var(--pale);
+}
+
+.hero-brand {
+  padding-top: 2px;
+}
+
+.hero-brand h1 {
+  font-family: var(--display);
+  font-size: clamp(5.5rem, 12vw, 10.8rem);
+  line-height: 0.95;
+  letter-spacing: 1px;
+  margin: 0;
+  color: #bdc3cc;
+}
+
+.blue-rule {
+  display: block;
+  height: 8px;
+  background: var(--blue);
+  width: 91%;
+  margin-top: 12px;
+}
+
+/* FORMULÁRIO */
+
+.signup {
+  max-width: 510px;
+  width: 100%;
+}
+
+.signup h2 {
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
+  font-weight: 400;
+  margin: -2px 0 6px;
+  letter-spacing: -1px;
+}
+
+.signup label {
+  display: block;
+  color: #bdc3cc;
+  font-size: 0.95rem;
+  margin: 0 0 6px 4px;
+}
+
+.signup input {
+  width: 100%;
+  border: 2px solid #bdc3cc;
+  border-radius: 26px;
+  padding: 10px 14px;
+  background: transparent;
+  color: white;
+  font: inherit;
+  outline-offset: 3px;
+}
+
+.signup input::placeholder {
+  color: #c6cbd2;
+}
+
+.signup button {
+  width: 94%;
+  display: block;
+  margin: 12px auto 6px;
+  border: 0;
+  border-radius: 26px;
+  background: var(--blue);
+  color: #d7dce2;
+  padding: 7px;
+  font: inherit;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.signup button:hover {
+  filter: brightness(1.12);
+}
+
+.form-feedback {
+  text-align: center;
+  font-size: 0.8rem;
+  margin: 3px 0;
+  color: var(--light-blue);
+}
+
+.or {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  color: #c5cbd2;
+  font-size: 0.75rem;
+  margin-top: 5px;
+}
+
+.or span {
+  width: 25%;
+  height: 2px;
+  background: #c5cbd2;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  padding: 10px 0 0;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  color: #c5cbd2;
+  font-size: 1rem;
+}
+
+.google-g {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #4285f4;
+  text-shadow: 1px 1px #34a853;
+}
+
+.microsoft {
+  width: 20px;
+  height: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2px;
+}
+
+.microsoft i:nth-child(1) {
+  background: #f35325;
+}
+
+.microsoft i:nth-child(2) {
+  background: #81bc06;
+}
+
+.microsoft i:nth-child(3) {
+  background: #05a6f0;
+}
+
+.microsoft i:nth-child(4) {
+  background: #ffba08;
+}
+
+/* ORGANIZAÇÕES */
+
+.partners {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  gap: 12px;
+  padding: 38px 4% 54px;
+  border-bottom: 7px solid var(--pale);
+}
+
+.partner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  text-align: center;
+}
+
+.circle {
+  width: clamp(72px, 11vw, 130px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 5px double var(--ink);
+  outline: 2px solid currentColor;
+  display: block;
+}
+
+.circle.coral {
+  background: var(--coral);
+  color: var(--coral);
+}
+
+.circle.blue {
+  background: var(--blue);
+  color: var(--blue);
+}
+
+.circle.yellow {
+  background: #ffb900;
+  color: #ffb900;
+}
+
+.circle.green {
+  background: #7dbb00;
+  color: #7dbb00;
+}
+
+.circle.purple {
+  background: #c75cde;
+  color: #c75cde;
+}
+
+.partner strong {
+  font-family: var(--display);
+  font-size: clamp(1.15rem, 2.7vw, 2rem);
+  font-weight: 400;
+  color: var(--pale);
+}
+
+/* ESTATÍSTICAS */
+
+.evidence {
+  background: var(--pale);
+  color: var(--ink);
+  min-height: 390px;
+  padding: 18px 5% 35px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.evidence-left p {
+  margin: 5px 0;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+}
+
+.evidence-left > p:first-child {
+  font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+}
+
+.number {
+  display: block;
+  font-size: clamp(3.5rem, 7vw, 5.8rem);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.coral-text {
+  color: var(--coral) !important;
+}
+
+.blue-text {
+  color: var(--blue) !important;
+}
+
+.evidence h3 {
+  font-family: var(--display);
+  font-size: clamp(2rem, 4.2vw, 3.7rem);
+  line-height: 0.98;
+  margin: 0;
+  font-weight: 400;
+}
+
+.evidence-right p {
+  margin: 4px 0;
+  font-size: clamp(0.85rem, 1.7vw, 1.15rem);
+}
+
+.evidence-right .percent {
+  font-size: clamp(2.4rem, 5vw, 3.3rem);
+  font-weight: 400;
+  margin: 0;
+}
+
+.evidence-right .black-rule {
+  display: block;
+  height: 6px;
+  width: 75%;
+  background: var(--ink);
+  margin: 6px auto 10px;
+}
+
+.evidence-right .smaller {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 400;
+  margin: 3px 0;
+}
+
+.evidence-right .performance {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-top: 0;
+}
+
+/* DESTAQUE DA MARCA */
+
+.difference {
+  text-align: center;
+  padding: 16px 15px 6px;
+  border-top: 17px solid var(--coral);
+  border-bottom: 8px solid var(--pale);
+}
+
+.difference p {
+  margin: 0;
+  color: var(--pale);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+.difference h2 {
+  margin: 14px 0 6px;
+  font-family: var(--display);
+  color: var(--blue);
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  font-weight: 400;
+}
+
+/* COMPARAÇÃO SEMÂNTICA */
+
+.semantic {
+  text-align: center;
+  padding: 28px 4% 22px;
+}
+
+.semantic > p {
+  margin: 0;
+  font-size: clamp(1.1rem, 3vw, 2rem);
+}
+
+.compare {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin: 10px auto 8px;
+  max-width: 950px;
+}
+
+.compare h2 {
+  font-family: var(--display);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 400;
+  color: var(--coral);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.double-rule {
+  height: 12px;
+  flex: 1;
+  max-width: 340px;
+  background: linear-gradient(
+    to bottom,
+    var(--blue) 0 4px,
+    transparent 4px 7px,
+    var(--blue) 7px 11px,
+    transparent 11px
+  );
+}
+
+/* CÁLCULO DE ECONOMIA */
+
+.calculation {
+  padding: 45px 0 20px;
+}
+
+.equation {
+  background: var(--coral);
+  color: var(--ink);
+  border: 2px solid #252b37;
+  border-radius: 34px;
+  padding: 42px 3%;
+  min-height: 170px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 12px;
+}
+
+.equation div {
+  text-align: center;
+  min-width: 0;
+}
+
+.equation strong {
+  display: block;
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.equation small {
+  display: block;
+  color: white;
+  font-size: clamp(0.62rem, 1.4vw, 1rem);
+  font-weight: 800;
+  margin-top: 22px;
+  white-space: nowrap;
+}
+
+.operator {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+/* CHAMADA FINAL */
+
+.pitch {
+  text-align: center;
+  padding: 25px 15px 48px;
+  border-bottom: 9px solid var(--blue);
+}
+
+.pitch p {
+  margin: 4px 0;
+}
+
+.headline {
+  font-family: var(--display);
+  font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+}
+
+.large {
+  font-size: clamp(1.35rem, 4vw, 2.5rem);
+  font-weight: 400;
+}
+
+.efficiency {
+  color: var(--light-blue);
+  font-size: clamp(1.45rem, 4vw, 2.7rem);
+  margin: 60px 0 !important;
+}
+
+.audience small {
+  display: block;
+  font-size: 1rem;
+}
+
+.audience h2 {
+  color: var(--light-blue);
+  font-family: var(--display);
+  font-size: clamp(2.4rem, 5vw, 3.7rem);
+  font-weight: 400;
+  margin: 0;
+}
+
+.audience p {
+  font-size: clamp(1.1rem, 3vw, 2rem);
+  margin-top: 10px;
+}
+
+/* RODAPÉ */
+
+footer {
+  text-align: center;
+  padding: 28px 15px 40px;
+}
+
+.footer-rule {
+  display: block;
+  height: 8px;
+  background: var(--blue);
+  margin: -36px -15px 20px;
+}
+
+footer p {
+  color: #bdc3cc;
+  font-family: var(--display);
+  font-size: clamp(4rem, 9vw, 7rem);
+  margin: 0;
+}
+
+footer a {
+  color: var(--pale);
+  font-size: 0.9rem;
+}
+
+/* TELAS GRANDES */
+
+@media (min-width: 1100px) {
+  main {
+    max-width: 1414px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    grid-template-columns: 1fr 0.85fr;
+  }
+}
+
+/* CELULARES E TABLETS */
+
+@media (max-width: 700px) {
+  .topbar {
+    padding: 10px 14px;
+  }
+
+  .top-actions {
+    gap: 6px;
+  }
+
+  .btn {
+    padding: 8px 10px;
+    font-size: 0.75rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 25px 6% 28px;
+  }
+
+  .hero-brand h1 {
+    font-size: clamp(5.5rem, 20vw, 8.5rem);
+  }
+
+  .blue-rule {
+    width: 100%;
+  }
+
+  .signup {
+    max-width: none;
+  }
+
+  .signup h2 {
+    text-align: center;
+  }
+
+  .partners {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 32px 5%;
+    row-gap: 28px;
+  }
+
+  .partner:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .circle {
+    width: 82px;
+  }
+
+  .evidence {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px 5%;
+  }
+
+  .evidence-left {
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(16, 17, 22, 0.2);
+  }
+
+  .compare {
+    gap: 10px;
+  }
+
+  .double-rule {
+    height: 9px;
+  }
+
+  .calculation {
+    padding-top: 28px;
+  }
+
+  .equation {
+    border-radius: 22px;
+    flex-wrap: wrap;
+    padding: 25px 12px;
+    gap: 12px 7px;
+  }
+
+  .equation div {
+    flex: 1 1 35%;
+  }
+
+  .equation small {
+    margin-top: 7px;
+  }
+
+  .operator {
+    flex: 0 0 auto;
+  }
+
+  .efficiency {
+    margin: 42px 0 !important;
+  }
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 390px) {
+  .wordmark {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    padding: 7px 8px;
+  }
+
+  .socials {
+    gap: 18px;
+  }
+
+  .equation strong {
+    font-size: 1.45rem;
+  }
+
+  .equation small {
+    white-space: normal;
+  }
+}
