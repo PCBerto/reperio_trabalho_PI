@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reperio: inteligência semântica para reduzir chamados repetidos.">
+
+  <title>REPERIO | Chamados repetidos, resolvidos com inteligência</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topbar" id="topo">
+    <a class="wordmark" href="#topo">REPERIO</a>
+
+    <nav class="top-actions" aria-label="Navegação principal">
+      <a class="btn btn-outline" href="#contato">Fale conosco</a>
+      <a class="btn btn-dark" href="#cadastro">Comece já</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="cadastro">
+      <div class="hero-brand">
+        <h1>REPERIO</h1>
+        <span class="blue-rule"></span>
+      </div>
+
+      <div class="signup">
+        <h2>JUNTE-SE A NÓS</h2>
+
+        <form action="#" method="get"
+          onsubmit="event.preventDefault(); document.getElementById('form-feedback').textContent='Cadastro demonstrativo enviado!';">
+
+          <label for="email">E-mail</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="sua@empresa.com"
+            required
+          >
+
+          <button type="submit">Fazer cadastro</button>
+          <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
+        </form>
+
+        <div class="or">
+          <span></span>
+          Ou continuar com
+          <span></span>
+        </div>
+
+        <div class="socials">
+          <a href="#cadastro" aria-label="Continuar com Google">
+            <b class="google-g">G</b> Google
+          </a>
+
+          <a href="#cadastro" aria-label="Continuar com Microsoft">
+            <b class="microsoft">
+              <i></i><i></i><i></i><i></i>
+            </b>
+            Microsoft
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="partners" aria-label="Organizações">
+      <div class="partner">
+        <span class="circle coral"></span>
+        <strong>Empresa X</strong>
+      </div>
+
+      <div class="partner">
+        <span class="circle blue"></span>
+        <strong>Empresa Y</strong>
+      </div>
+
+      <div class="partner">
+        <span class="circle yellow"></span>
+        <strong>Empresa Z</strong>
+      </div>
+
+      <div class="partner">
+        <span class="circle green"></span>
+        <strong>Instituto X</strong>
+      </div>
+
+      <div class="partner">
+        <span class="circle purple"></span>
+        <strong>Internacional X</strong>
+      </div>
+    </section>
+
+    <section class="evidence">
+      <div class="evidence-left">
+        <p>Baseado em</p>
+        <strong class="number coral-text">25</strong>
+        <h3>análises</h3>
+        <p>de diferentes empresas</p>
+      </div>
+
+      <div class="evidence-right">
+        <p class="percent">≈86%</p>
+        <p>dos assistentes técnicos relatam o<br class="desktop-only"> mesmo</p>
+        <h3 class="blue-text">PROBLEMA</h3>
+
+        <span class="black-rule"></span>
+
+        <h3 class="coral-text">CHAMADOS REPETIDOS</h3>
+        <p>podem impactar em até</p>
+        <p class="number coral-text smaller">56%</p>
+        <p class="performance">o desempenho</p>
+      </div>
+    </section>
+
+    <section class="difference">
+      <p>MAS COM</p>
+      <h2>REPERIO</h2>
+      <p>É DIFERENTE</p>
+    </section>
+
+    <section class="semantic">
+      <p>A IA utiliza a semântica de chamados anteriores e</p>
+
+      <div class="compare">
+        <span class="double-rule"></span>
+        <h2>COMPARA</h2>
+        <span class="double-rule"></span>
+      </div>
+
+      <p>com o atual</p>
+    </section>
+
+    <section class="calculation" aria-label="Cálculo de economia de tempo">
+      <div class="equation">
+        <div>
+          <strong>10</strong>
+          <small>PROFISSIONAIS</small>
+        </div>
+
+        <b class="operator">×</b>
+
+        <div>
+          <strong>20 min</strong>
+          <small>POR DIA</small>
+        </div>
+
+        <b class="operator">×</b>
+
+        <div>
+          <strong>22</strong>
+          <small>DIAS ÚTEIS</small>
+        </div>
+
+        <b class="operator">=</b>
+
+        <div>
+          <strong>73h20/MÊS</strong>
+          <small>≈ 9 DIAS DE TRABALHO</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="pitch">
+      <p class="headline">Chega de perder tempo com</p>
+      <p class="large coral-text">CHAMADOS REPETIDOS</p>
+      <p class="large">ECONOMIZE SEU TEMPO</p>
+
+      <p class="efficiency">até 4,17% de eficiência a mais</p>
+
+      <div class="audience">
+        <small>para</small>
+        <h2>ASSISTENTES TÉCNICOS</h2>
+        <small>cansados de</small>
+        <p class="coral-text">RESOLVER O MESMO PROBLEMA</p>
+      </div>
+    </section>
+
+    <footer id="contato">
+      <span class="footer-rule"></span>
+      <p>REPERIO</p>
+      <a href="mailto:contato@reperio.com.br">Fale com a gente</a>
+    </footer>
+  </main>
+</body>
+</html>
