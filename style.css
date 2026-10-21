@@ -237,31 +237,223 @@ a {
 
 /* ORGANIZAÇÕES */
 
-.partners {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  align-items: center;
-  gap: 12px;
-  padding: 38px 4% 54px;
+
+/* SEÇÃO DE PARCEIROS */
+
+.partner-section {
+  background: var(--ink);
+  padding: 48px 5% 42px;
   border-bottom: 7px solid var(--pale);
+  overflow: hidden;
 }
 
-.partner {
+.partner-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.partner-tag {
+  display: inline-block;
+  color: var(--coral);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.partner-heading h2 {
+  color: var(--pale);
+  font-size: clamp(1.6rem, 3.5vw, 2.7rem);
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.partner-heading p {
+  color: #9ba5b5;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* CARROSSEL */
+
+.partner-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.partners-track {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  width: 100%;
+  padding: 12px 4px 18px;
+}
+
+.partners-track::-webkit-scrollbar {
+  display: none;
+}
+
+.partner-card {
+  flex: 0 0 calc((100% - 48px) / 3);
+  min-width: 145px;
+  scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 9px;
   text-align: center;
+  gap: 9px;
 }
 
-.circle {
-  width: clamp(72px, 11vw, 130px);
-  aspect-ratio: 1;
+.partner-logo {
+  width: 112px;
+  height: 112px;
   border-radius: 50%;
-  border: 5px double var(--ink);
-  outline: 2px solid currentColor;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.04);
+  transition: transform 0.25s, box-shadow 0.25s;
 }
+
+.partner-card:hover .partner-logo {
+  transform: translateY(-5px) scale(1.04);
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.08);
+}
+
+.logo-symbol {
+  font-family: var(--display);
+  font-size: 4rem;
+  line-height: 1;
+  color: white;
+  text-shadow: 2px 3px rgba(0, 0, 0, 0.18);
+}
+
+/* IDENTIDADES VISUAIS FICTÍCIAS */
+
+.logo-one {
+  background: linear-gradient(135deg, #3279b9, #142b50);
+}
+
+.logo-two {
+  background: linear-gradient(135deg, #dc8269, #963e46);
+}
+
+.logo-three {
+  background: linear-gradient(135deg, #9a8bdb, #423875);
+}
+
+.logo-four {
+  background: linear-gradient(135deg, #42b9aa, #12675f);
+}
+
+.logo-five {
+  background: linear-gradient(135deg, #e7b34e, #a65b24);
+}
+
+.logo-six {
+  background: linear-gradient(135deg, #8199b6, #34495e);
+}
+
+.partner-card strong {
+  color: var(--pale);
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+.partner-card small {
+  color: #8e99aa;
+  font-size: 0.75rem;
+}
+
+.carousel-btn {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #536074;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--pale);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+  z-index: 1;
+}
+
+.carousel-btn:hover {
+  background: var(--blue);
+  color: white;
+}
+
+.carousel-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.carousel-indicator span {
+  width: 7px;
+  height: 7px;
+  background: #505667;
+  border-radius: 50%;
+}
+
+.carousel-indicator span:first-child {
+  width: 22px;
+  border-radius: 8px;
+  background: var(--coral);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+  .partner-section {
+    padding: 38px 12px 32px;
+  }
+
+  .partner-heading {
+    padding: 0 12px;
+  }
+
+  .partner-carousel {
+    gap: 5px;
+  }
+
+  .partners-track {
+    gap: 14px;
+  }
+
+  .partner-card {
+    flex-basis: calc((100% - 14px) / 2);
+    min-width: 125px;
+  }
+
+  .partner-logo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .logo-symbol {
+    font-size: 3.3rem;
+  }
+
+  .carousel-btn {
+    flex-basis: 30px;
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+}
+
 
 .circle.coral {
   background: var(--coral);
