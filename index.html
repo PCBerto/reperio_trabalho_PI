@@ -73,6 +73,7 @@
     </section>
 
     
+```html
 <section class="partner-section">
   <div class="partner-heading">
     <span class="partner-tag">NOSSAS CONEXÕES</span>
@@ -81,7 +82,8 @@
   </div>
 
   <div class="partner-carousel">
-    <button class="carousel-btn prev" aria-label="Parceiros anteriores"
+    <button class="carousel-btn prev"
+      aria-label="Parceiros anteriores"
       onclick="movePartners(-1)">&#10094;</button>
 
     <div class="partners-track" id="partnersTrack">
@@ -136,16 +138,18 @@
 
     </div>
 
-    <button class="carousel-btn next" aria-label="Próximos parceiros"
+    <button class="carousel-btn next"
+      aria-label="Próximos parceiros"
       onclick="movePartners(1)">&#10095;</button>
   </div>
 
-  <div class="carousel-indicator">
+  <div class="carousel-indicator" aria-hidden="true">
     <span></span>
     <span></span>
     <span></span>
   </div>
 </section>
+```
 
     <section class="evidence">
       <div class="evidence-left">
